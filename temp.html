@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>National Gardens of Athens</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+      h2 {
+        margin: 0;
+      }
+      .title {
+        font-size: 30px;
+      }
+      .subtitle {
+        font-size: 25px;
+      }
+      .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        background: #e0e0e0;
+        justify-content: center;
+      }
+      .tab-button {
+        background: #ccc;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 2px;
+      }
+      .tab-button.active {
+        background: #7ab27c;
+        color: white;
+      }
+      .tab-content {
+        display: none;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 20px auto 20px auto;
+        background: white;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+      }
+      footer {
+        background-color: #4caf50;
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1 style="margin: 0">Exploring The National Gardens of Athens</h1>
+      </div>
+      <div class="subtitle">
+        <p style="margin: 0">An Interpretive Garden Guide</p>
+      </div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-button active" onclick="showTab('intro')">
+        Introduction
+      </button>
+      <button class="tab-button" onclick="showTab('history')">
+        History & Background
+      </button>
+      <button class="tab-button" onclick="showTab('design')">
+        Design Elements
+      </button>
+      <button class="tab-button" onclick="showTab('experience')">
+        Visitor Experience
+      </button>
+      <button class="tab-button" onclick="showTab('engagement')">
+        Uses & Engagement
+      </button>
+      <button class="tab-button" onclick="showTab('reflections')">
+        Reflections & Value
+      </button>
+      <button class="tab-button" onclick="showTab('info')">
+        Practical Info
+      </button>
+      <button class="tab-button" onclick="showTab('gallery')">Gallery</button>
+      <button class="tab-button" onclick="showTab('references')">
+        References
+      </button>
+    </div>
+
+    <div class="tab-content active" id="intro">
+      <h2>Introduction</h2>
+      <p>
+        [Introduce the park briefly. Mention its location and overall vibe.]
+      </p>
+    </div>
+
+    <div class="tab-content" id="history">
+      <h2>History & Background</h2>
+      <p>[When was it established? Any interesting background?]</p>
+    </div>
+
+    <div class="tab-content" id="design">
+      <h2>Design Elements</h2>
+      <p>
+        [Describe the layout, pathways, plant choices, water features, seating
+        areas, etc.]
+      </p>
+      <img src="your-photo1.jpg" alt="Photo of park feature" />
+    </div>
+
+    <div class="tab-content" id="experience">
+      <h2>Visitor Experience</h2>
+      <p>
+        [Describe how someone might explore it. What to look for, what time of
+        day is best, etc.]
+      </p>
+    </div>
+
+    <div class="tab-content" id="engagement">
+      <h2>Uses & User Engagement</h2>
+      <p>
+        [Who uses this space? Joggers, families, solo visitors? How do they
+        interact with it?]
+      </p>
+    </div>
+
+    <div class="tab-content" id="reflections">
+      <h2>Reflections & Value</h2>
+      <p>
+        [What did you learn or feel during your visit? Why is this greenspace
+        important to Copenhagen?]
+      </p>
+    </div>
+
+    <div class="tab-content" id="info">
+      <h2>Practical Information</h2>
+      <ul>
+        <li><strong>Opening Hours:</strong> [Insert here]</li>
+        <li><strong>Entry Fee:</strong> [Insert here or “Free”]</li>
+        <li><strong>Facilities:</strong> [Bathrooms, cafe, etc.]</li>
+        <li><strong>Nearby Transport:</strong> [Metro/bus stops?]</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="gallery">
+      <h2>Gallery</h2>
+      <img src="your-photo2.jpg" alt="Gallery photo 1" />
+      <img src="your-photo3.jpg" alt="Gallery photo 2" />
+    </div>
+
+    <div class="tab-content" id="references">
+      <h2>References</h2>
+      <p>[List any sources used here in your preferred citation style.]</p>
+    </div>
+
+    <footer>
+      <p>Created by Maggie Hollis | GAIEC Garden Guide | DIS Copenhagen</p>
+    </footer>
+
+    <script>
+      function showTab(id) {
+        // Hide all tabs
+        const tabs = document.querySelectorAll(".tab-content");
+        tabs.forEach((tab) => tab.classList.remove("active"));
+
+        // Remove 'active' from all buttons
+        const buttons = document.querySelectorAll(".tab-button");
+        buttons.forEach((btn) => btn.classList.remove("active"));
+
+        // Show the selected tab
+        document.getElementById(id).classList.add("active");
+        event.target.classList.add("active");
+      }
+    </script>
+  </body>
+</html>
